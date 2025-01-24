@@ -198,7 +198,7 @@ function render_servers_section( $values ) {
 function wmc_settings( $settings ) {
 
 	$settings[] = array(
-		'title' => __( 'WooMinecraft Options', 'woominecraft' ),
+		'title' => __( 'TradePost Options', 'woominecraft' ),
 		'id'    => 'wmc_options',
 		'type'  => 'title',
 	);

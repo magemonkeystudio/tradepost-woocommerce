@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/WooMinecraft/woominecraft-wp.git"
+    "url": "https://github.com/magemonkeystudio/tradepost-woocommerce.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/WooMinecraft/woominecraft-wp/issues"
+    "url": "https://github.com/magemonkeystudio/tradepost-woocommerce/issues"
   },
-  "homepage": "https://github.com/WooMinecraft/woominecraft-wp",
+  "homepage": "https://github.com/magemonkeystudio/tradepost-woocommerce",
   "devDependencies": {}
 }
