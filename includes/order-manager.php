@@ -183,6 +183,22 @@ function get_player_id_for_order($order_id)
 }
 
 /**
+ * Gets the price for an order.
+ *
+ * @param int|\WP_Post $order_id
+ * @return float
+ */
+function get_price_for_order($order_id)
+{
+    if (is_object($order_id) && isset($order_id->ID)) {
+        $order_id = intval($order_id->ID);
+    }
+
+    $order = wc_get_order($order_id);
+    return $order->get_total();
+}
+
+/**
  * Generates the order JSON data for a single order.
  *
  * @param \WP_Post|int $order_post
@@ -233,7 +249,7 @@ function get_orders_for_server($server_key)
 
         $player_id = get_player_id_for_order($wc_order->get_id());
         $order_data = generate_order_json($wc_order->get_id(), $server_key);
-        $price = $wc_order->get_total();
+        $price = get_price_for_order($wc_order->get_id());
         if (empty($order_data)) {
             continue;
         }
